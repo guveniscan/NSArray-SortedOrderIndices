@@ -11,9 +11,9 @@
 @interface NSArray (SortedOrderIndices)
 
 //Returns indices of array ordered ascending
--(NSArray *) sortedOrderIndicesOfArray:(NSArray *) array;
+-(NSArray *) sortedOrderIndices;
 
 //Returns indices of array sorted
--(NSArray *) sortedOrderIndicesOfArray:(NSArray *) array ascending:(BOOL) ascending;
+-(NSArray *) sortedOrderIndicesAscending:(BOOL) ascending;
 
 @end

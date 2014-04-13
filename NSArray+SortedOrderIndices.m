@@ -10,18 +10,18 @@
 
 @implementation NSArray (SortedOrderIndices)
 
--(NSArray *) sortedOrderIndicesOfArray:(NSArray *) array
+-(NSArray *) sortedOrderIndices
 {
-    return [self sortedOrderIndicesOfArray:array ascending:TRUE];
+    return [self sortedOrderIndicesAscending:TRUE];
 }
 
--(NSArray *) sortedOrderIndicesOfArray:(NSArray *) array ascending:(BOOL) ascending
+-(NSArray *) sortedOrderIndicesAscending:(BOOL) ascending
 {
     //Wrap array's objects into nsdictionaries
     NSMutableArray *wrappedObjs = [NSMutableArray array];
-    for (NSInteger i = 0; i < array.count; i++)
+    for (NSInteger i = 0; i < self.count; i++)
     {
-        [wrappedObjs addObject:@{@"value": array[i], @"index":@(i)}];
+        [wrappedObjs addObject:@{@"value": self[i], @"index":@(i)}];
     }
     
     //Specify the value field as sort criteria and sort
